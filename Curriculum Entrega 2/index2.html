@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Curriculum HTML y JavaScript con Bootstrap</title>
+  <link rel="stylesheet" href="bootstrap/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Formulario</h1>
+
+    <div class="card">
+      <div class="card-body">
+        <form id="myForm">
+          <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensaje:</label>
+            <input type="text" id="message" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="salary">Sueldo:</label>
+            <input type="number" id="salary" class="form-control" min="10000" required>
+          </div>
+
+          <button type="button" onclick="submitForm()" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <h2>Tabla de Datos</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Mensaje</th>
+          <th>Sueldo</th>
+        </tr>
+      </thead>
+      <tbody id="dataBody"></tbody>
+    </table>
+
+    <button onclick="sortSalary()" class="btn btn-primary">Ordenar por Sueldo</button>
+  </div>
+
+  <script src="bootstrap/bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
